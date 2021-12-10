@@ -2,7 +2,7 @@ counter = -1 # first one will always increase, so we start counting at -1
 
 prev = 0
 
-with open("01-input") as file:
+with open("01-input.txt") as file:
     for line in file:
         lineint = int(line.strip("\n"))
         if lineint > prev:

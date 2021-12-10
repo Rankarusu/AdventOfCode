@@ -2,7 +2,7 @@ hor = 0
 depth = 0
 aim = 0
 
-with open("02-input") as file:
+with open("02-input.txt") as file:
     for line in file:
         linearr = line.strip("\n").split(" ")
         command = linearr[0]

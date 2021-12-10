@@ -2,7 +2,7 @@ counter = 0 # first one will always increase, so we start counting at -1
 
 prev = 0
 
-lines = [int(i) for i in open("01-input").readlines()]
+lines = [int(i) for i in open("01-input.txt").readlines()]
 
 prevsum = lines[0] + lines[1] + lines[2]
 
