@@ -17,7 +17,7 @@ def mark(board, start:tuple, end:tuple):
 
 def count_danger(board):
     """
-    count all fields with more than 2 overlapping lines.
+    count all fields with 2 or more overlapping lines.
     """
     counter = 0
     for i in range(0, len(board)):
@@ -36,6 +36,4 @@ with open("05-input.txt") as file:
         y = tuple(map(int, splitline[1].split(",")))
         mark(board, x, y)
 
-    for line in board:
-        print("".join([str(i) for i in line]))
 print(count_danger(board))
