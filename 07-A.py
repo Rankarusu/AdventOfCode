@@ -1,5 +1,8 @@
+import statistics
+
 def shortest_distance(arr):
     middle = len(arr) //2
+    #round(statistics.median(crabs)) also gets this.
     meeting_point = arr[middle]
     dist = 0
     for i in arr:
