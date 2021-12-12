@@ -12,11 +12,6 @@ def shortest_distance(arr):
     print(dist)
 
 
-def cost(start, end):
-    n = abs(start-end)
-    return (n*(n + 1) //2)
-
-
 with open("07-input.txt") as file:
     crabs = file.read().strip().split(',')
     crabs = list(map(int, crabs))
