@@ -38,6 +38,13 @@ class octopi:
                         self.flashed.append((i,j))
                         self.flash(i,j)
 
+    def check_for_simul_flash(self):
+        arr = []
+        for line in self.board:
+            arr.extend(line)
+        if len(set(arr)) == 1: # each char only once in a set.
+            return True
+        return False
 
 with open("11-input.txt") as file:
     lines = [x.strip() for x in file.readlines()]
@@ -46,11 +53,14 @@ with open("11-input.txt") as file:
 
 sum = 0
 oct = octopi(board)
-for x in range(100): 
+
+#TIL: python does not have a do while loop
+i = 0
+while True:
+    i += 1
     oct.rise()
     oct.flash_all()
-    sum += len(oct.flashed)
     oct.reset()
-
-
-print(sum)
+    if oct.check_for_simul_flash():
+        print(i)
+        break
