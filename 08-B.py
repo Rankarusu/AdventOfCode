@@ -1,4 +1,4 @@
-#please forgive me whoever reads this. I am drunk.-
+#please forgive me whoever reads this. 
 
 def get_diff(eight:str, nine:str):
     for x in eight:
@@ -65,7 +65,3 @@ with open("08-input.txt") as file:
         sum += int(output)
 
 print(sum)
-
-
-
- 
