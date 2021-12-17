@@ -27,7 +27,6 @@ def compute_output(input): #
     return counter[0][1] - counter[-1][1]
 
 
-
 for x in range(40):
     poly = polymerize(poly)
     print(x)
