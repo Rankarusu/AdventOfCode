@@ -6,15 +6,15 @@ with open("15-input.txt") as file:
 
 
 
-newgrid = [] #
+newgrid = [] 
 for i in range(5):
-    for line in grid: #
+    for line in grid: 
         newline = []
         for j in range(5):
             for x in line:
                 cur = x + i + j
                 if cur > 9:
-                    cur  = cur -9 # so every chunk gets larger and wraps around 9
+                    cur  = cur -9
                 newline.append(cur)
         newgrid.append(newline)
 
